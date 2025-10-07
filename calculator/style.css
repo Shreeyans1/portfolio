@@ -1,0 +1,110 @@
+html{
+   background-color: rgba(255, 229, 158, 0.649); 
+   height: auto;
+}
+
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator{
+    width: 40vw;
+    background-color: #ff6b97;
+    border-style: solid;
+    border-color: #ffaeae #ff9999 rgb(229, 95, 178)   rgb(177, 99, 185);
+    border-width: 20px;
+    padding: 40px 40px 30px 40px;
+    border-radius: 30px 30px 30px 30px;
+}
+
+#display{
+    text-align: left;
+    padding: 20px;
+    margin: 0;
+    height:10px;
+    background-color: #471e2b00;
+    border: none;
+    color: rgb(201, 82, 151);
+    font-size: xx-large;
+    
+
+}
+
+.output{
+    height: 200px;
+    border-style: solid;
+    border-color: rgb(214, 97, 160)   rgb(214, 97, 160) #ffe0c5 #ff9999;
+    background-color: rgba(255, 229, 158, 0.649);
+    border-width: 6px;
+}
+
+.keypad{
+    background-color: #ff6b97;
+    width: 100%;
+    padding: 20px 0px 20px 0px;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.viewmode{
+    display: flex;
+    flex-direction: column;
+}
+
+.button{
+    border-radius: 0.2cm;
+    border-color: #ffe0c5 #ff9999 rgb(214, 97, 160)   rgb(214, 97, 160);
+    border-width: 6px;
+    border-style: solid;
+    color: rgb(240, 100, 147);
+    background-color: rgba(255, 229, 158, 0.649);
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+    font-weight: 1000;
+    margin: 0px 0 0 0;
+    display: inline-block;
+    padding: 10px;
+    width: 30%;
+    min-width: 5px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: #ffd5a6;
+}
+
+@media(max-width: 400px){
+    .calculator{
+        width: 100vh;
+        height: auto;
+    }
+}
+
+@media(max-height: 655px) and (orientation:landscape){
+    .calculator{
+        width: 100vw;
+        height: auto;
+    }
+    .viewmode{
+        flex-direction:row;
+    }
+    .output{
+        width: 100%;
+        margin-right: 20px;
+    }
+    .keypad{
+        width: 100%;
+        margin-left: 20px;
+        margin-top: 0;
+        padding-top: 0;
+    }
+}

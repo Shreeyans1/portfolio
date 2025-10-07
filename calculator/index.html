@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <svg style="position: fixed; z-index:-1; bottom:0px; min-width:100%" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" width="1440" height="560" preserveAspectRatio="none" viewBox="0 0 1440 560">
+        <g mask="url(&quot;#SvgjsMask1148&quot;)" fill="none">
+            <rect width="1440" height="560" x="0" y="0" fill="rgba(255, 235, 191, 1)"></rect>
+            <path d="M1560 560L0 560 L0 148.09Q67.8 95.89, 120 163.7Q180.17 151.87, 192 212.04Q239.2 187.24, 264 234.44Q288.34 138.78, 384 163.12Q398.95 106.07, 456 121.02Q499.51 92.53, 528 136.04Q578.97 115.01, 600 165.98Q651.75 145.74, 672 197.49Q710.12 115.61, 792 153.72Q860.66 102.38, 912 171.04Q928.59 115.63, 984 132.22Q1012.98 89.19, 1056 118.17Q1143.88 86.04, 1176 173.92Q1244.65 170.57, 1248 239.23Q1252.72 123.95, 1368 128.67Q1435.97 124.64, 1440 192.62Q1494.32 126.94, 1560 181.25z" fill="rgba(253, 153, 195, 1)"></path>
+            <path d="M1464 560L0 560 L0 230.66Q75.92 186.58, 120 262.51Q205.64 276.15, 192 361.8Q185.37 235.17, 312 228.54Q392.03 188.57, 432 268.61Q537.26 253.87, 552 359.13Q562.89 298.02, 624 308.91Q651.52 216.43, 744 243.95Q770.91 198.86, 816 225.77Q868.41 206.18, 888 258.59Q980.18 230.76, 1008 322.94Q1027.42 270.37, 1080 289.79Q1116.08 205.87, 1200 241.94Q1251.19 221.13, 1272 272.32Q1335.29 263.61, 1344 326.89Q1362.43 225.32, 1464 243.76z" fill="rgba(255, 178, 210, 1)"></path>
+            <path d="M1464 560L0 560 L0 433.21Q39.26 352.47, 120 391.72Q144.29 344.01, 192 368.3Q244.43 300.73, 312 353.16Q340.32 309.49, 384 337.81Q477.13 310.94, 504 404.06Q590.61 370.67, 624 457.28Q644.42 405.7, 696 426.12Q785.09 395.21, 816 484.3Q840.18 388.48, 936 412.65Q982.26 338.91, 1056 385.17Q1101.67 310.84, 1176 356.51Q1217.02 325.53, 1248 366.56Q1302.14 348.71, 1320 402.85Q1344.46 355.31, 1392 379.77Q1433.5 349.27, 1464 390.77z" fill="rgba(255, 217, 229, 1)"></path>
+            <path d="M1536 560L0 560 L0 458.46Q103.34 489.8, 72 593.15Q53.75 502.9, 144 484.65Q196.19 416.84, 264 469.03Q315.43 400.46, 384 451.89Q434.01 429.9, 456 479.92Q503.75 455.68, 528 503.43Q568.8 424.23, 648 465.02Q744.18 441.2, 768 537.39Q848.64 498.03, 888 578.68Q890.87 509.54, 960 512.41Q989.32 469.73, 1032 499.04Q1084.57 479.61, 1104 532.18Q1198.7 506.88, 1224 601.57Q1258.02 515.59, 1344 549.6Q1339.21 472.81, 1416 468.03Q1510.27 442.29, 1536 536.56z" fill="rgba(255, 255, 255, 1)"></path>
+        </g>
+        <defs>
+            <mask id="SvgjsMask1148">
+                <rect width="1440" height="560" fill="#ffffff"></rect>
+            </mask>
+        </defs>
+    </svg>
+
+    <div class="calculator">
+        <div class="viewmode">
+            <div class="output">
+                <p id="display"></p>
+            </div>
+    
+            <div class="keypad">
+                <div class="container row1">
+                    <button style="width: 50%;" onclick="clearDisplay()" class="button C">
+                        Clear
+                    </button>
+                    <button style="width: 25%;" onclick="appendToDisplay('**')" class="button ^">
+                        ^
+                    </button>
+                    <button style="width: 25%;" onclick="appendToDisplay('/')" class="button /">
+                        /
+                    </button>
+                </div>
+    
+                <div class="container row2">
+                    <button onclick="appendToDisplay('7')" class="button 7">
+                        7
+                    </button>
+                    <button onclick="appendToDisplay('8')" class="button 8">
+                        8  
+                    </button>
+                    <button onclick="appendToDisplay('9')" class="button 9">
+                        9
+                    </button>
+                    <button onclick="appendToDisplay('*')" class="button x">
+                        x
+                    </button>
+                </div>
+    
+                <div class="container row3">
+                    <button onclick="appendToDisplay('4')" class="button 4">
+                        4
+                    </button>
+                    <button onclick="appendToDisplay('5')" class="button 5">
+                        5
+                    </button>
+                    <button onclick="appendToDisplay('6')" class="button 6">
+                        6
+                    </button>
+                    <button onclick="appendToDisplay('-')" class="button -">
+                        -
+                    </button>
+                </div>
+    
+                <div class="container row4">
+                    <button onclick="appendToDisplay('1')" class="button 1">
+                        1
+                    </button>
+                    <button onclick="appendToDisplay('2')" class="button 2">
+                        2
+                    </button>
+                    <button onclick="appendToDisplay('3')" class="button 3">
+                        3
+                    </button>
+                    <button onclick="appendToDisplay('+')" class="button +">
+                        +
+                    </button>
+                </div>
+    
+                <div class="container row5">
+                    <button onclick="fullDisplay()" class="button +/-">
+                        +/-
+                    </button>
+                    <button onclick="appendToDisplay('0')" class="button 0">
+                        0
+                    </button>
+                    <button onclick="appendToDisplay('.')" class="button .">
+                        .
+                    </button>
+                    <button onclick="calculate()" class="button =">
+                        =
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+    <script src="/calculator/index.js"></script>
+</body>
+</html>

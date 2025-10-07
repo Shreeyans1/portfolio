@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div style="display: flex; justify-content: center; align-items: center; width: 100vw;">
+        <div class="toolbar" style="display: flex; flex-direction: row;">
+            <button onclick="todolistbtn()" class="tool">To do list</button>
+            <button class="tool">highlighter</button>
+        </div>
+        
+        <div class="todolist draggable">
+            <div class="taskadder header">
+                <input class="pangolin-regular input" type="text" id="inputbox" placeholder="Type a new task">
+                <button onclick="addtask()" class="addbtn">
+                <svg height="30px" width="30px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#2e2e2e"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10 1H6V6L1 6V10H6V15H10V10H15V6L10 6V1Z" fill="#4d4d4d"></path> </g></svg>                </button>
+            </div>
+            <div class="tasklist pangolin-regular">
+
+            </div>
+        </div> 
+        
+        <div class="page">
+            <p>
+                Notes
+            </p>
+        </div>
+        
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>

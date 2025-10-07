@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Jersey+10&family=Oswald:wght@200..700&family=Poiret+One&display=swap" rel="stylesheet">
+</head>
+<body> 
+    <div class="container">
+        <div class="toolbar" style="display: flex; flex-direction: row;">
+            
+        </div>
+        <!-- Toggle Button -->
+        <button id="toggleTodo" class="toggle-btn">☰ To-Do</button>
+
+        <!-- To-Do Sidebar -->
+        <div class="todolist sidebar" id="todoSidebar">
+            <div class="taskadder header">
+                <input class="pangolin-regular input" type="text" id="inputbox" placeholder="Type a new task">
+                <button onclick="addtask()" class="addbtn">
+                    <svg height="30px" width="30px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#2e2e2e">
+                        <path d="M10 1H6V6L1 6V10H6V15H10V10H15V6L10 6V1Z" fill="#4d4d4d"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="tasklist pangolin-regular" id="tasklist"></div>
+        </div>
+
+
+        <div class="pomodoro" style="text-align: center;">
+            <div>
+                <p class="timetitle">Pomodoro Timer</p>
+            </div>
+            <div class="timer">
+                <div style="height: 10vw; display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                    <input type="text" class="hour time" placeholder="0">
+                    <p style="font-size: 7vw">:</p>
+                    <input type="text" class="minute time" placeholder="20">
+                    <p style="font-size: 7vw">:</p>
+                    <input type="text" class="second time" placeholder="0">
+                </div>
+                <div style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                    <button onclick="startTimer()" class="timerbtn"><svg viewBox="-0.5 0 7 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>play [#ffffff]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-347.000000, -3766.000000)" fill="#ffffff"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M296.494737,3608.57322 L292.500752,3606.14219 C291.83208,3605.73542 291,3606.25002 291,3607.06891 L291,3611.93095 C291,3612.7509 291.83208,3613.26444 292.500752,3612.85767 L296.494737,3610.42771 C297.168421,3610.01774 297.168421,3608.98319 296.494737,3608.57322" id="play-[#ffffff]"> </path> </g> </g> </g> </g></svg></button>
+                    <button onclick="pauseTimer()" class="timerbtn"><svg viewBox="-1 0 8 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#ffffff" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>pause [#ffffff]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-227.000000, -3765.000000)" fill="#ffffff"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M172,3605 C171.448,3605 171,3605.448 171,3606 L171,3612 C171,3612.552 171.448,3613 172,3613 C172.552,3613 173,3612.552 173,3612 L173,3606 C173,3605.448 172.552,3605 172,3605 M177,3606 L177,3612 C177,3612.552 176.552,3613 176,3613 C175.448,3613 175,3612.552 175,3612 L175,3606 C175,3605.448 175.448,3605 176,3605 C176.552,3605 177,3605.448 177,3606" id="pause-[#ffffff]"> </path> </g> </g> </g> </g></svg></button>
+                    <button class="timerbtn"><svg fill="#ffffff" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M960 0v213.333c411.627 0 746.667 334.934 746.667 746.667S1371.627 1706.667 960 1706.667 213.333 1371.733 213.333 960c0-197.013 78.4-382.507 213.334-520.747v254.08H640V106.667H53.333V320h191.04C88.64 494.08 0 720.96 0 960c0 529.28 430.613 960 960 960s960-430.72 960-960S1489.387 0 960 0" fill-rule="evenodd"></path> </g></svg></button>
+                </div>
+            </div>
+            
+        </div>
+
+        <!-- Trigger Button -->
+        <button id="go" class="open-notebook-btn">Open Notebook</button>
+
+        <!-- Notebook Panel -->
+        <div id="notebook" class="notebook">
+        <div class="notebook-header">
+            <span>📝 My Notes</span>
+            <div class="toolbar">
+            <button id="highlight-toggle" title="Toggle Highlighter">🖍️ Highlight</button>
+            <button id="close-notebook" title="Close Notebook">✖</button>
+            </div>
+        </div>
+        <div id="notebook-content" class="notebook-content" contenteditable="true">
+            Start typing here...
+        </div>
+        </div>
+
+        <!-- 🎵 Spotify Player Widget -->
+        <div class="spotify-widget">
+        <h3>🎶 Focus Playlist</h3>
+        <input type="text" id="spotifyLink" placeholder="Paste your Spotify playlist link...">
+        <button id="loadSpotify">Load Playlist</button>
+        
+        <div class="spotify-player" id="spotifyPlayerContainer">
+            <p style="color:#777; font-size:14px;">Your playlist will appear here 🎧</p>
+        </div>
+        </div>
+
+
+    </div>
+
+    
+
+    
+    <script src="./index.js"></script>
+</body>
+</html>
