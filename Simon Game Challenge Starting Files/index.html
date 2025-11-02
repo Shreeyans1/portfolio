@@ -1,38 +1,46 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
-  <title>Simon</title>
+  <title>Simon Arcade</title>
   <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <h1 id="level-title">Press A Key to Start</h1>
-  <div class="container">
-    <div class="first row">
 
-      <div type="button" id="green" class="btn green">
+  <div class="arcade">
+    <div class="arcade-header">
+      <h1 id="level-title">Press Any Key to Start</h1>
+    </div>
 
+    <div class="container">
+      <div class="row">
+        <div type="button" id="green" class="btn green"></div>
+        <div type="button" id="red" class="btn red"></div>
       </div>
-
-      <div type="button" id="red" class="btn red">
-
+      <div class="row">
+        <div type="button" id="yellow" class="btn yellow"></div>
+        <div type="button" id="blue" class="btn blue"></div>
       </div>
     </div>
 
-    <div class="last row">
-
-      <div type="button" id="yellow" class="btn yellow">
-
-      </div>
-      <div type="button" id="blue" class="btn blue">
-
-      </div>
-
+    <div class="instructions">
+      <h2>🕹️ How to Play</h2>
+      <ul>
+        <li>Press any key to start the game.</li>
+        <li>Watch carefully — one light will flash at the start of each round.</li>
+        <li>Each new round adds <strong>one new color</strong> to the sequence.</li>
+        <li>The computer only flashes the <strong>newest color</strong> — but you must remember and repeat the <strong>entire sequence</strong> from the very first light to the last new one.</li>
+        <li>Click the buttons in the correct order to advance to the next level.</li>
+        <li>Miss a color and it’s <span class="game-over-text">Game Over</span>!</li>
+      </ul>
     </div>
 
+    <div class="arcade-footer">
+      <p class="footer-text">👾 Shreeyans’ Simon Arcade</p>
+    </div>
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
